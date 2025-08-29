@@ -24,7 +24,7 @@
 ```javaScript
 return {
     status: "correct",
-    message: "El seno de 30° es 0.5",
+    message: "The cosine of 30° is 0.5",
     result: 0.5
 };
 ```
@@ -41,86 +41,87 @@ dicha conversión.
 
 0. **Formula de conversión grados a radianes**
 
-\[
-radianes = grados \times \frac{\pi}{180}
-\]
+```
+radianes = grados * (π / 180)
+```
 
 - **En JavaScript:**
+
 ```javaScript
-    radian = degrees * (Math.PI / 180);
+const radian = degrees * (Math.PI / 180);
 ```
 
 ---
 
 1. **Calcular Seno**
 
-\[
-\sin(\theta) = \frac{ \text{cateto opuesto} }{ \text{hipotenusa} }
-\]
+```
+seno(θ) = cateto_opuesto / hipotenusa
+```
 
 - **En JavaScript:**
 
-\[
-\sin(\theta) = Math.sin\left( \theta \times \frac{\pi}{180} \right)
-\]
+```JavaScript
+const sine = Math.sin(angle * (Math.PI / 180));
+```
 
 ---
 
 2. **Calcular Coseno**
 
-\[
-\cos(\theta) = \frac{ \text{cateto adyacente} }{ \text{hipotenusa} }
-\]
+```
+coseno(θ) = cateto_adyacente / hipotenusa
+```
 
 - **En JavaScript:**
 
-\[
-\cos(\theta) = Math.cos\left( \theta \times \frac{\pi}{180} \right)
-\]
+```JavaScript
+const cosine = Math.cos(angle * (Math.PI / 180));
+```
 
 ---
 
 3. **Calcular Tangente**
 
-\[
-\tan(\theta) = \frac{ \text{cateto opuesto} }{ \text{cateto adyacente} }
-\]
+```
+tangente(θ) = cateto_opuesto / cateto_adyacente
+```
 
 - **En JavaScript:**
 
-\[
-\tan(\theta) = Math.tan\left( \theta \times \frac{\pi}{180} \right)
-\]
+```JavaScript
+const tangent = Math.tan(angle * (Math.PI / 180));
+```
 
 ---
 
 4. **Calcular Potencia**
 
-\[
-\text{Potencia} = \text{base}^{\text{exponente}}
-\]
+```
+potencia = base ^ exponente
+```
 
 - **En JavaScript:**
 
-\[
-\text{Potencia} = Math.pow(\text{base}, \text{exponente})
-\]
-
-(O también usando el operador `**` → `base ** exponente`).
+```javaScript
+const power = Math.pow(base, exponent);
+// O también usando el operador ** → base ** exponent.
+const power = base ** exponent;
+```
 
 ---
 
 5. **Calcular Raíz Cuadrada**
 
-\[
-\sqrt{n} = x \quad \text{tal que} \quad x^2 = n
-\]
+```
+raíz_cuadrada(n) = x   tal que   x * x = n
+```
 
 - **En JavaScript:**
 
-\[
-\sqrt{n} = Math.sqrt(n)
-\]
+```JavaScript
+const root = Math.sqrt(n);
+```
 
 ---
 
@@ -130,8 +131,8 @@ Un archivo **`mathServices.js`** que contenga la clase y la prueba de los métod
 
 Ejemplo:
 ```javaScript
-const menu = new MathServices();
-console.log(menu.calculateSine(30));
+const calculator = new MathServices();
+console.log(calculator.calculateSine(30));
 ```
 
 ---
